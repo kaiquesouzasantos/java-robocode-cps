@@ -1,4 +1,4 @@
-package etec2022;
+package etec_ct_2022;
 import robocode.*;
 import java.awt.Color;
 
