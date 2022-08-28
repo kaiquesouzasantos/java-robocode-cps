@@ -4,8 +4,7 @@ import java.awt.Color;
 
 public class CT_FormataMeuPC extends AdvancedRobot {
 	// variaveis de inicialização
-	boolean inicio = true;
-	boolean canhao = true;
+	public boolean inicio = true, canhao = true;
 
 	public void run() {
 		// definições esteticas
@@ -55,7 +54,7 @@ public class CT_FormataMeuPC extends AdvancedRobot {
 		
 	}
 
-	public void onHitWall(HitWallEvent elemento) {
+	public void onHitWall(HitWallEvent evento) {
 		// quando o robo colide com uma parede: recua -> esquerda -> avanca
 		setBack(20);
 		setTurnLeft(90);
@@ -85,14 +84,14 @@ public class CT_FormataMeuPC extends AdvancedRobot {
 	}
 		
 	// quando colide com um inimigo
-	public void onHitRobot(HitRobotEvent elemento) {}
+	public void onHitRobot(HitRobotEvent evento) {}
 
 	// quando sofre um ataque inimigo
-	public void onHitByBullet(HitByBulletEvent elemento) {}
+	public void onHitByBullet(HitByBulletEvent evento) {}
 	
 	// quando o ataque é acertivo
-	public void onBulletHit(BulletHitEvent elemento) {}
+	public void onBulletHit(BulletHitEvent evento) {}
 
 	// quando o ataque colide com a parede/borda
-	public void onBulletMissed(BulletMissedEvent elemento) {}
+	public void onBulletMissed(BulletMissedEvent evento) {}
 }
