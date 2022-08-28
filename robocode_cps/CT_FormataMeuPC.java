@@ -4,7 +4,7 @@ import java.awt.Color;
 
 public class CT_FormataMeuPC extends AdvancedRobot {
 	boolean inicio = true;
-	boolean GunD = true;
+	boolean canhao = true;
 
 	public void run() {
 		setBodyColor(Color.black);
@@ -13,7 +13,7 @@ public class CT_FormataMeuPC extends AdvancedRobot {
 
 		while(true) {
 			// gira o canhão quando inativo
-			if (GunD == true){
+			if (canhao == true){
 				turnGunRight(180);
 			} else {
 				turnGunLeft(180);
@@ -30,7 +30,7 @@ public class CT_FormataMeuPC extends AdvancedRobot {
 		setTurnRight(elemento.getBearing());
 		setAhead(elemento.getDistance() - 10);
 
-		// busca o menor caminho e angulo ideal do inimigo em relaçao a tela, utilizando do metodo normalRelativeAngle
+		// busca o menor caminho e angulo ideal do inimigo em relaçao a tela, utilizando do metodo ajustaAngulo
 		// calculo: anguloInimigo + (seuAngulo - anguloRadar)
 		double mira = ajustaAngulo((elemento.getBearing() + (getHeading() - getRadarHeading())));
 
@@ -41,11 +41,11 @@ public class CT_FormataMeuPC extends AdvancedRobot {
 		if (elemento.getDistance() < 80) {
 			// em curtas distancias, o poder de ataque é intenso, pois fica fixado no tanque inimigo. Quase que uma luta corpo á corpo
 			fire(7);
-			GunD = !GunD;
+			canhao = !canhao;
 		} else if(elemento.getDistance() > 80 && elemento.getDistance() < 500){
 			// em distancias maiores, o poder de fogo é reduzido
 			fire(3);
-			GunD = !GunD;
+			canhao = !canhao;
 		}
 		
 	}
@@ -79,7 +79,7 @@ public class CT_FormataMeuPC extends AdvancedRobot {
 	}
 		
 	public void onHitRobot(HitRobotEvent elemento) {
-		// ao entrar em contato com a borda: recua -> esquerda
+		// ao entrar em contato com a borda: recua -> direira
 		if (elemento.getName().indexOf("Border") != -1) {
 			back(50);
 			turnRight(90);
