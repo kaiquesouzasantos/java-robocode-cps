@@ -7,8 +7,8 @@ public class CT_Baixinha extends AdvancedRobot {
 	boolean GunD = true;
 
 	public void run() {
-		setBodyColor(new Color(255, 0, 0));
-		setGunColor(new Color(255, 0, 0));
+		setBodyColor(Color.black);
+		setGunColor(Color.black);
 		setRadarColor(new Color(0, 0, 0));
 
 		while(true) {
@@ -39,7 +39,12 @@ public class CT_Baixinha extends AdvancedRobot {
 
 		// ajusta o poder de fogo e atira
 		if (elemento.getDistance() < 80) {
+			// em curtas distancias, o poder de ataque é intenso, pois fica fixado no tanque inimigo. Quase que uma luta corpo á corpo
 			fire(7);
+			GunD = !GunD;
+		} else if(elemento.getDistance() > 80 && elemento.getDistance() < 500){
+			// em distancias maiores, o poder de fogo é reduzido
+			fire(3);
 			GunD = !GunD;
 		}
 		
