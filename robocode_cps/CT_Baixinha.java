@@ -39,7 +39,7 @@ public class CT_Baixinha extends AdvancedRobot {
 
 		// ajusta o poder de fogo e atira
 		if (elemento.getDistance() < 80) {
-			fire(6);
+			fire(7);
 			GunD = !GunD;
 		}
 		
