@@ -32,14 +32,14 @@ public class CT_Baixinha extends AdvancedRobot {
 
 		// busca o menor caminho e angulo ideal do inimigo em relaçao a tela, utilizando do metodo normalRelativeAngle
 		// calculo: anguloInimigo + (seuAngulo - anguloRadar)
-		double mira = normalRelativeAngle((elemento.getBearing() + (getHeading() - getRadarHeading())));
+		double mira = ajustaAngulo((elemento.getBearing() + (getHeading() - getRadarHeading())));
 
 		// direciona o angulo de ataque do canhão
 		turnGunRight(mira);
 
 		// ajusta o poder de fogo e atira
 		if (elemento.getDistance() < 80) {
-			fire(3);
+			fire(6);
 			GunD = !GunD;
 		}
 		
@@ -52,7 +52,7 @@ public class CT_Baixinha extends AdvancedRobot {
 		setAhead(20);
 	}
 
-	public double normalRelativeAngle(double angulo) {
+	public double ajustaAngulo(double angulo) {
 		// se o angulo estiver entre -180° e 180, ele não necessita de ajuste
 		if (angulo > -180 && angulo <= 180) {
 			return angulo;
