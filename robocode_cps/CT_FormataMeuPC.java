@@ -3,16 +3,18 @@ import robocode.*;
 import java.awt.Color;
 
 public class CT_FormataMeuPC extends AdvancedRobot {
+	// variaveis de inicialização
 	boolean inicio = true;
 	boolean canhao = true;
 
 	public void run() {
+		// definições esteticas
 		setBodyColor(Color.black);
 		setGunColor(Color.black);
 		setRadarColor(new Color(0, 0, 0));
 
 		while(true) {
-			// gira o canhão quando inativo
+			// gira o canhão quando não estiver executando outras funções
 			if (canhao == true){
 				turnGunRight(180);
 			} else {
@@ -27,6 +29,7 @@ public class CT_FormataMeuPC extends AdvancedRobot {
 			return;
 		}
 
+		// robo: direita -> avança
 		setTurnRight(elemento.getBearing());
 		setAhead(elemento.getDistance() - 10);
 
@@ -41,22 +44,25 @@ public class CT_FormataMeuPC extends AdvancedRobot {
 		if (elemento.getDistance() < 80) {
 			// em curtas distancias, o poder de ataque é intenso, pois fica fixado no tanque inimigo. Quase que uma luta corpo á corpo
 			fire(7);
+			// para a rotação do canhao
 			canhao = !canhao;
 		} else if(elemento.getDistance() > 80 && elemento.getDistance() < 500){
 			// em distancias maiores, o poder de fogo é reduzido
 			fire(3);
+			// para a rotação do canhao
 			canhao = !canhao;
 		}
 		
 	}
 
 	public void onHitWall(HitWallEvent elemento) {
-		// quando bater em uma parede: atras -> esquerda -> frente
+		// quando o robo colide com uma parede: recua -> esquerda -> avanca
 		setBack(20);
 		setTurnLeft(90);
 		setAhead(20);
 	}
 
+	// basicamente: ajusta o angulo da linha de fogo, para obter uma maior acertividade. 
 	public double ajustaAngulo(double angulo) {
 		// se o angulo estiver entre -180° e 180, ele não necessita de ajuste
 		if (angulo > -180 && angulo <= 180) {
@@ -78,13 +84,8 @@ public class CT_FormataMeuPC extends AdvancedRobot {
 		return anguloFixado;
 	}
 		
-	public void onHitRobot(HitRobotEvent elemento) {
-		// ao entrar em contato com a borda: recua -> direira
-		if (elemento.getName().indexOf("Border") != -1) {
-			back(50);
-			turnRight(90);
-		}
-	}
+	// quando colide com um inimigo
+	public void onHitRobot(HitRobotEvent elemento) {}
 
 	// quando sofre um ataque inimigo
 	public void onHitByBullet(HitByBulletEvent elemento) {}
@@ -92,6 +93,6 @@ public class CT_FormataMeuPC extends AdvancedRobot {
 	// quando o ataque é acertivo
 	public void onBulletHit(BulletHitEvent elemento) {}
 
-	// quando o ataque não acerta nenhum inimigo
+	// quando o ataque colide com a parede/borda
 	public void onBulletMissed(BulletMissedEvent elemento) {}
 }
