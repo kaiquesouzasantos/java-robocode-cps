@@ -24,12 +24,12 @@ public class CT_FormataMeuPC extends AdvancedRobot {
 	}
 
 	public void onScannedRobot(ScannedRobotEvent elemento) {
-		// verifica o tipo de objeto escaneado
+		// verifica o tipo de objeto escaneado, desconsideranco-o se for uma parede
 		if (elemento.getName().indexOf("Border") != -1) {
 			return;
 		}
 
-		// robo: direita -> avança
+		// robo: direita(anguloInimigo) -> avança(distanciaInimigo - 10)
 		setTurnRight(elemento.getBearing());
 		setAhead(elemento.getDistance() - 10);
 
