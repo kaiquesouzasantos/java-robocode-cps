@@ -2,7 +2,7 @@ package robocode_cps;
 import robocode.*;
 import java.awt.Color;
 
-public class CT_Baixinha extends AdvancedRobot {
+public class CT_FormataMeuPC extends AdvancedRobot {
 	boolean inicio = true;
 	boolean GunD = true;
 
