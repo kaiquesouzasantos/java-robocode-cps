@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="robocode.png">
+</p>
+
 <h1 align=center>ROBOCODE-CPS</h1>
 
 ### SOBRE
