@@ -2,8 +2,6 @@
   <img src="robocode.png">
 </p>
 
-<h1 align=center>ROBOCODE-CPS</h1>
-
 ### SOBRE
 
 - Diretório contendo projeto desenvolvido em Java para o 10° Torneio Robocode, promovido pelo Centro Paula Souza.
