@@ -2,6 +2,7 @@
   <img src="robocode.png">
 </p>
 
+#
 ### SOBRE
 
 - Diretório contendo projeto desenvolvido em Java para o 10° Torneio Robocode, promovido pelo Centro Paula Souza.
