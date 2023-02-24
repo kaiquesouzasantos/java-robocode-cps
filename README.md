@@ -12,7 +12,7 @@
 
 #
 ### TECNOLOGIA
-- [Java](https://docs.oracle.com/en/java)
+![Java](https://img.shields.io/badge/Java-0D1117?style=for-the-badge&logo=java&logoColor=white&labelColor=0D1117)&nbsp;
 
 #
 ### CONTRIBUIÇÃO
