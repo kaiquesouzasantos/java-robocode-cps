@@ -2,7 +2,15 @@ package robocode_cps;
 import robocode.*;
 import java.awt.Color;
 
-public class CT_FormataMeuPC extends AdvancedRobot {
+/*
+	- Etec: 199 - Etec Cidade Tiradentes
+	- Orientador: Danadoni Lima dos Santos
+ 	- Robo: Adestrador de Samurai
+  	- Curso: Desenvolvimentos de Sistemas
+  	- Integrante: Kaique Souza Santos
+*/
+
+public class AdestradorDeSamurai extends AdvancedRobot {
 	// variaveis de inicialização
 	public boolean inicio = true, canhao = true;
 
