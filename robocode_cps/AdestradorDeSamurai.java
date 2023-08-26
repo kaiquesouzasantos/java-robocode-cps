@@ -1,11 +1,10 @@
-package robocode_cps;
 import robocode.*;
 import java.awt.Color;
 
 /*
 	- Etec: 199 - Etec Cidade Tiradentes
 	- Orientador: Danadoni Lima dos Santos
- 	- Robo: Adestrador de Samurai
+ 	- Robo: Adestrador De Samurai
   	- Curso: Desenvolvimentos de Sistemas
   	- Integrante: Kaique Souza Santos
 */
