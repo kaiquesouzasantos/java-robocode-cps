@@ -49,12 +49,12 @@ public class AdestradorDeSamurai extends AdvancedRobot {
 		// ajusta o poder de fogo e atira
 		if (elemento.getDistance() < 80) {
 			// em curtas distancias, o poder de ataque é intenso, pois fica fixado no tanque inimigo. Quase que uma luta corpo á corpo
-			fire(7);
+			fire(10);
 			// para a rotação do canhao
 			canhao = !canhao;
 		} else if(elemento.getDistance() > 80 && elemento.getDistance() < 500){
 			// em distancias maiores, o poder de fogo é reduzido
-			fire(3);
+			fire(4);
 			// para a rotação do canhao
 			canhao = !canhao;
 		}
