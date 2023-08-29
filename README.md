@@ -11,6 +11,15 @@
 - <strong>Proposta:</strong> Utiliza o Software Robocode®, que é um jogo de programação, onde o objetivo é desenvolver/adaptar um tanque de guerra para a batalha contra outros tanques em uma arena virtual utilizando a linguagem de programação Java. Usado para ferramenta no processo de ensino-aprendizagem em programação e inteligência artificial (AI).
 
 #
+### INFORMACOES
+
+- *Escola*: 199 - Etec Cidade Tiradentes
+- *Orientador*: Danadoni Lima dos Santos
+- *Robo*: Adestrador De Samurai
+- *Curso*: Desenvolvimentos de Sistemas
+- *Integrante*: Kaique Souza Santos
+
+#
 ### TECNOLOGIA
 ![Java](https://img.shields.io/badge/Java-0D1117?style=for-the-badge&logo=java&logoColor=white&labelColor=0D1117)&nbsp;
 
